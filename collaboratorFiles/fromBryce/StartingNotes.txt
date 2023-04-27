@@ -1,0 +1,9 @@
+Useful Link: https://connectome-neuprint.github.io/neuprint-python/docs/index.html
+
+1. You will want to create an account on NeuPrint before using this python package. It's simple, and all you really need is a gmail account (you could make one with your school email if needed)
+2. After making an account you will need to locate the Authentication Token that NeuPrint provides. You can find this by clicking your account icon in the top right, and selecting "Account"
+3. You will need to have some sort of python coding environment. I use Anaconda 3 and specifically Spyder 3, so further instructions will be based on this. However you can use whatever IDE you would like.
+4. Install the Neuprint package from the Anaconda command prompt ("CMD.exe Prompt") using the following command: "conda install -c flyem-forge neuprint-python"
+5. In Spyder, make sure to have a path to your libraries so you can call the NeuPrint functions. This can be done with Tools -> PYTHONPATH manager.
+6. Import the NeuPrint package to make use of it's functions and the database using "import neuprint"
+5. Import the functions you wish to use. As a starting point, I would recommend "NeuronCriteria" and "fetch_adjacencies" as starting points.
