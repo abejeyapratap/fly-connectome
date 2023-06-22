@@ -1,0 +1,30 @@
+name: neuprint
+channels:
+  - flyem-forge
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bokeh=2.4.3=py310hecd8cb5_0
+  - datashader=0.14.4=py310hecd8cb5_1
+  - graphviz=2.50.0=h196fa6a_0
+  - matplotlib=3.6.2=py310hecd8cb5_0
+  - networkx=2.8.4=py310hecd8cb5_0
+  - neuprint-python=0.4.25=py_0
+  - numpy=1.23.5=py310h9638375_0
+  - pandas=1.5.2=py310h3ea8b11_0
+  - pip=22.3.1=py310hecd8cb5_0
+  - pygraphviz=1.9=py310h6c40b1e_1
+  - pip:
+      - bctpy==0.6.0
+      - jsonpickle==3.0.1
+      - lxml==4.9.2
+      - netneurotools==0.2.3
+      - nibabel==5.1.0
+      - nilearn==0.10.1
+      - pydot==1.4.2
+      - pyvis==0.3.2
+      - scikit-network==0.30.0
+      - scipy==1.10.1
+      - webweb==0.0.37
+prefix: /Users/abejey/opt/anaconda3/envs/neuprint
