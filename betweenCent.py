@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import pickle
+import time
 
 import numpy as np
 import pandas as pd
@@ -36,14 +37,16 @@ maybe calculate modularity (reflects degree of community structure) and assortat
 data structure to store results: dictionary of list containing a dictionary of networkx's values
 {consensusIterationNum: [{cluster1's metric}, {cluster2's metric}] } 
 """
+startTime = time.time()
 metricName = "betweenCentrality"
 graphMetric = {}
 
-print(f"Calculating graph theory metrics: {metricName}")
+print(f"Calculating graph theory metrics: {metricName}\n")
 for result in consensusResults:
     iteration, consensus = result
     graphMetric[iteration] = []
     
+    iterStartTime = time.time()
     for clusterId in range(1, consensus.max()+1): # cluster indices are beween 1-n (inclusive)
         cluster_indices = np.where(consensus == clusterId)[0]
         cluster_nodes = [graph.names[i] for i in cluster_indices] # bodyIds
@@ -53,7 +56,8 @@ for result in consensusResults:
         # calculate graph theory metrics
         cluster_betweenness = nx.betweenness_centrality(cluster_subgraph, weight='weight') # maybe set endpoints=True
         graphMetric[iteration].append(cluster_betweenness)
-    # print()
+    print(f"Iteration {iteration} runtime: {(time.time()-iterStartTime):.2f}s")
+print(f"Total runtime: {(time.time()-startTime):.2f}s")
 
 # save graph theory results
 with open(f'{metricName}.pkl', 'wb') as handle:
