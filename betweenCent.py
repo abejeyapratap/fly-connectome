@@ -20,7 +20,7 @@ DNp_ids = [int(i) for i in body_ids]
 
 consensusResults = np.load("consensusResults.npy", allow_pickle=True)
 
-all_connection_df = pd.read_csv("all_connection_df.csv")
+all_connection_df = pd.read_csv("./data/all_connection_df.csv")
 dfFilt = all_connection_df[['bodyId_pre', 'bodyId_post', 'weight']] # sknetwork uses 3rd col as weight
 
 # sknetwork: only needed bc Louvain's clustering assignment output is based on graph.names order
