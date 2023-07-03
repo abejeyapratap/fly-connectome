@@ -1,0 +1,8 @@
+Calculating graph theory metrics: betweenCentrality
+
+Iteration 10 runtime: 360.69s
+Iteration 20 runtime: 353.12s
+Iteration 50 runtime: 354.78s
+Iteration 100 runtime: 447.30s
+Iteration 250 runtime: 370.58s
+Total runtime: 1886.48s
