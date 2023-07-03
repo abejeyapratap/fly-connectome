@@ -36,9 +36,10 @@ maybe calculate modularity (reflects degree of community structure) and assortat
 data structure to store results: dictionary of list containing a dictionary of networkx's values
 {consensusIterationNum: [{cluster1's metric}, {cluster2's metric}] } 
 """
-metricName = "degreeCentrality"
+metricName = "betweenCentrality"
 graphMetric = {}
 
+print(f"Calculating graph theory metrics: {metricName}")
 for result in consensusResults:
     iteration, consensus = result
     graphMetric[iteration] = []
@@ -50,8 +51,8 @@ for result in consensusResults:
         # print(cluster_subgraph.number_of_nodes(), cluster_subgraph.number_of_edges())
 
         # calculate graph theory metrics
-        cluster_degreeCentrality = nx.degree_centrality(cluster_subgraph)
-        graphMetric[iteration].append(cluster_degreeCentrality)
+        cluster_betweenness = nx.betweenness_centrality(cluster_subgraph, weight='weight') # maybe set endpoints=True
+        graphMetric[iteration].append(cluster_betweenness)
     # print()
 
 # save graph theory results
