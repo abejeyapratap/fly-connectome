@@ -4,5 +4,5 @@
 eval "$(conda shell.bash hook)"
 conda activate neuprint
 
-nohup ./betweenCent.py > log1.out &
-nohup ./smallWorldSigma.py > log2.out &
+nohup ./scripts/betweenCent.py > ./logs/log1.out &
+nohup ./scripts/smallWorldSigma.py > ./logs/log2.out &

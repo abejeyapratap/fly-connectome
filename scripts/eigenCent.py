@@ -38,7 +38,7 @@ data structure to store results: dictionary of list containing a dictionary of n
 {consensusIterationNum: [{cluster1's metric}, {cluster2's metric}] } 
 """
 startTime = time.time()
-metricName = "betweenCentrality"
+metricName = "eigenCentrality"
 graphMetric = {}
 
 print(f"Calculating graph theory metrics: {metricName}\n")
@@ -54,11 +54,11 @@ for result in consensusResults:
         # print(cluster_subgraph.number_of_nodes(), cluster_subgraph.number_of_edges())
 
         # calculate graph theory metrics
-        cluster_betweenness = nx.betweenness_centrality(cluster_subgraph, weight='weight') # maybe set endpoints=True
-        graphMetric[iteration].append(cluster_betweenness)
+        cluster_eigenvector = nx.eigenvector_centrality_numpy(cluster_subgraph, weight='weight') # numpy version is faster for larger graphs
+        graphMetric[iteration].append(cluster_eigenvector)
     print(f"Iteration {iteration} runtime: {(time.time()-iterStartTime):.2f}s")
 print(f"Total runtime: {(time.time()-startTime):.2f}s")
 
 # save graph theory results
-with open(f'{metricName}.pkl', 'wb') as handle:
+with open(f'./data/{metricName}.pkl', 'wb') as handle:
     pickle.dump(graphMetric, handle)
