@@ -14,6 +14,9 @@ dependencies:
   - pandas=1.5.2
   - pip=22.3.1
   - pygraphviz=1.9
+  - python-igraph=0.10.5
+  - graph-tool=2.57
+  - graph-tool-base=2.57
   - pip:
       - bctpy==0.6.0
       - netneurotools==0.2.3
