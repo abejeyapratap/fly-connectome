@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
 # Run from ./scripts directory: python3 consensusClustering.py --expIters 100
+
 ### Consensus Clusters on Louvain Algorithm
 import numpy as np
 import pandas as pd
@@ -28,7 +28,7 @@ argparser.add_argument('--expIters', type=int, default=250, help='Number of iter
 
 args = argparser.parse_args()
 
-print(f"Consensus Clustering: {args.expIters} iterations\n")
+print(f"Running Consensus Clustering on Louvain: {args.expIters} iterations\n")
 
 
 # DNp01 (giant fiber) to DNp11
