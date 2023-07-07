@@ -9,7 +9,7 @@
 6. Install Python and Jupyter extensions in VSCode
 
 ### Updated Dependencies
-The `environment.yml` file may not contain some of the newest dependencies. Here are the commands used to download those:
+The `environment.yml` file may not contain some of the newest dependencies. Here are the commands used to download them (currently, they are optional):
 1. igraph: `conda install -c conda-forge python-igraph`
 2. graph-tool: `conda install -c conda-forge graph-tool`
 3. NNGT: `pip install --user nngt`
