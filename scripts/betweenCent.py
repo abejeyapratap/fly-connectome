@@ -18,7 +18,7 @@ import networkx as nx
 body_ids = ["2307027729","5813024015", "1565846637", "1405231475", "1466998977", "5813023322", "1100404581", "1226887763", "1228264951", "512851433", "5813026936", "1281324958"]
 DNp_ids = [int(i) for i in body_ids]
 
-consensusResults = np.load("consensusResults.npy", allow_pickle=True)
+consensusResults = np.load("./data/consensusResults.npy", allow_pickle=True)
 
 all_connection_df = pd.read_csv("./data/all_connection_df.csv")
 dfFilt = all_connection_df[['bodyId_pre', 'bodyId_post', 'weight']] # sknetwork uses 3rd col as weight
