@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 # Run from ./scripts directory: python3 consensusClustering.py --expIters 100
 ### Consensus Clusters on Louvain Algorithm
 import numpy as np
@@ -14,12 +16,19 @@ from sknetwork.clustering import Louvain, get_modularity
 from sknetwork.data import from_edge_list
 
 import argparse
+import time
+import warnings
+
+warnings.filterwarnings("ignore")
+startTime = time.time()
 
 # take in expIters as a required argument
 argparser = argparse.ArgumentParser(description='Consensus Clustering on Louvain Algorithm')
 argparser.add_argument('--expIters', type=int, default=250, help='Number of iterations for consensus clustering', required=True)
 
 args = argparser.parse_args()
+
+print(f"Consensus Clustering: {args.expIters} iterations\n")
 
 
 # DNp01 (giant fiber) to DNp11
@@ -108,10 +117,13 @@ clusterAssignments = np.array(clusterAssignments)
 
 # Run Consensus algorithm
 # consensus = cluster.find_consensus(np.column_stack(clusterAssignments), seed=1234)
+consensusStartTime = time.time()
 consensus = cluster.find_consensus(np.column_stack(clusterAssignments))
+consensusEndTime = time.time()
 
 # find unique labels and their counts
 labels_unique, counts = np.unique(consensus, return_counts=True)
+print("\nFinal Consensus Clustering Results:")
 print(labels_unique, counts)
 
 consensusResults.append((args.expIters, consensus))
@@ -119,3 +131,13 @@ consensusResults.append((args.expIters, consensus))
 ### save results of consensus clustering over all iterations
 outPath = f'../data/consensusResults/{args.expIters}.npy'
 np.save(outPath, np.array(consensusResults, dtype=object), allow_pickle=True)
+
+
+print("\n12 Descending Neuron cluster assignments:")
+bodyId_indices = [np.where(graph.names == neuron)[0][0] for neuron in DNp_ids] # indices of bodyIds in graph.names 
+for i in bodyId_indices:
+    print(consensus[i], end=', ')
+
+# Log time taken:
+print(f"\n\nTime taken for consensus clustering: {(consensusEndTime - consensusStartTime):.2f} seconds")
+print(f"Total time taken: {(time.time() - startTime):.2f} seconds")
