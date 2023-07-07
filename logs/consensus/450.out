@@ -1,0 +1,11 @@
+Consensus Clustering: 450 iterations
+
+
+Final Consensus Clustering Results:
+[1 2 3 4 5] [1707 1286  449 1077 1077]
+
+12 Descending Neuron cluster assignments:
+4, 4, 1, 4, 4, 2, 1, 2, 2, 1, 1, 4, 
+
+Time taken for consensus clustering: 1000.96 seconds
+Total time taken: 1116.49 seconds

@@ -1,0 +1,12 @@
+Consensus Clustering: 2000 iterations
+
+Traceback (most recent call last):
+  File "/home/aj928@drexel.edu/connectomics/fly-connectome/scripts/./consensusClustering.py", line 121, in <module>
+    consensus = cluster.find_consensus(np.column_stack(clusterAssignments))
+  File "/home/aj928@drexel.edu/miniconda3/envs/neuprint/lib/python3.10/site-packages/netneurotools/cluster.py", line 357, in find_consensus
+    agreement = bct.clustering.agreement(assignments, buffsz=samp) / comm
+  File "/home/aj928@drexel.edu/miniconda3/envs/neuprint/lib/python3.10/site-packages/bct/algorithms/clustering.py", line 44, in agreement
+    ind = dummyvar(ci)
+  File "/home/aj928@drexel.edu/miniconda3/envs/neuprint/lib/python3.10/site-packages/bct/utils/miscellaneous_utilities.py", line 78, in dummyvar
+    s_cis = cis[ix][:, range(m), range(m)]
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 167. GiB for an array with shape (5596, 2000, 2000) and data type int64
