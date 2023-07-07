@@ -1,0 +1,15 @@
+Cluster: 1
+Statistic: 0.028504501263004103; P-Value: 0.9984351059594012
+
+Cluster: 2
+Statistic: 0.5479131148089562; P-Value: 0.7005637470049588
+
+Cluster: 3
+Statistic: 726.8835116104891; P-Value: 0.0
+
+Cluster: 4
+Statistic: 156.78279877132493; P-Value: 6.559006267714698e-125
+
+Cluster: 5
+Statistic: 79.59887227828075; P-Value: 5.085556373249942e-66
+
