@@ -1,0 +1,1 @@
+All these scripts MUST be run from this directory. Do not run them from the root of the repository.

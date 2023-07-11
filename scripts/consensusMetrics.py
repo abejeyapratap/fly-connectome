@@ -1,29 +1,32 @@
 #!/usr/bin/env python3
 import pickle
 import time
+from pathlib import Path
+import argparse
 
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
-from netneurotools import cluster
-from netneurotools import modularity
-
-from sknetwork.clustering import Louvain, get_modularity
 from sknetwork.data import from_edge_list
-
 import networkx as nx
+
+# DIR = "../data/consensusResults2"
+DIR = Path.cwd().parent / "data" / "consensusResults2"
+
+# take metricName as a required argument
+argparser = argparse.ArgumentParser(description="Graph Theory Metrics")
+argparser.add_argument("--metricName", "-m", type=str, help="Graph theory metric calculated on consensus clustering", required=True, choices=["betweenCentrality", "degreeCentrality", "eigenCentrality", "smallWorldSigma"])
+
+args = argparser.parse_args()
 
 # DNp01 (giant fiber) to DNp11
 body_ids = ["2307027729","5813024015", "1565846637", "1405231475", "1466998977", "5813023322", "1100404581", "1226887763", "1228264951", "512851433", "5813026936", "1281324958"]
 DNp_ids = [int(i) for i in body_ids]
 
-# DIR = "./data"
-DIR = "./data/consensusResults2"
-consensusResults = np.load(f"{DIR}/consensusResults.npy", allow_pickle=True)
+consensusResults = np.load(DIR / "consensusResults.npy", allow_pickle=True)
 
-all_connection_df = pd.read_csv("./data/all_connection_df.csv")
-dfFilt = all_connection_df[['bodyId_pre', 'bodyId_post', 'weight']] # sknetwork uses 3rd col as weight
+all_connection_df = pd.read_csv(Path.cwd().parent / "data" / "all_connection_df.csv")
+dfFilt = all_connection_df[["bodyId_pre", "bodyId_post", "weight"]] # sknetwork uses 3rd col as weight
 
 # sknetwork: only needed bc Louvain's clustering assignment output is based on graph.names order
 graph = from_edge_list(list(dfFilt.itertuples(index=False)), weighted=True, directed=True) # without directed=True, wrong # of elements
@@ -40,7 +43,7 @@ data structure to store results: dictionary of list containing a dictionary of n
 {consensusIterationNum: [{cluster1's metric}, {cluster2's metric}] } 
 """
 startTime = time.time()
-metricName = "betweenCentrality"
+metricName = args.metricName
 graphMetric = {}
 
 print(f"Calculating graph theory metrics: {metricName}\n")
@@ -56,11 +59,11 @@ for result in consensusResults:
         # print(cluster_subgraph.number_of_nodes(), cluster_subgraph.number_of_edges())
 
         # calculate graph theory metrics
-        cluster_betweenness = nx.betweenness_centrality(cluster_subgraph, weight='weight') # maybe set endpoints=True
+        cluster_betweenness = nx.betweenness_centrality(cluster_subgraph, weight="weight") # maybe set endpoints=True
         graphMetric[iteration].append(cluster_betweenness)
     print(f"Iteration {iteration} runtime: {(time.time()-iterStartTime):.2f}s")
 print(f"Total runtime: {(time.time()-startTime):.2f}s")
 
 # save graph theory results
-with open(f'{DIR}/{metricName}.pkl', 'wb') as handle:
+with open(DIR / f"{metricName}.pkl", "wb") as handle:
     pickle.dump(graphMetric, handle)
