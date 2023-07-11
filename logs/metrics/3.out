@@ -1,0 +1,16 @@
+Calculating graph theory metrics: eigenCentrality
+
+Iteration 10 runtime: 0.63s
+Iteration 25 runtime: 0.60s
+Iteration 50 runtime: 0.66s
+Iteration 75 runtime: 0.62s
+Iteration 100 runtime: 0.61s
+Iteration 150 runtime: 0.67s
+Iteration 200 runtime: 0.67s
+Iteration 250 runtime: 0.61s
+Iteration 300 runtime: 0.67s
+Iteration 350 runtime: 0.60s
+Iteration 400 runtime: 0.67s
+Iteration 450 runtime: 0.61s
+Iteration 500 runtime: 0.67s
+Total runtime: 8.29s
