@@ -1,0 +1,145 @@
+[CLUSTER 1]
+
+Cluster 1 from 25 to 100
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 50 to 150
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 75 to 200
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 100 to 250
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 150 to 300
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 200 to 350
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 250 to 400
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 300 to 450
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+Cluster 1 from 350 to 500
+Statistic: 0.005668400297601157; P-Value: 0.9999999999823853
+
+[CLUSTER 2]
+
+Cluster 2 from 25 to 100
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 50 to 150
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 75 to 200
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 100 to 250
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 150 to 300
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 200 to 350
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 250 to 400
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 300 to 450
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+Cluster 2 from 350 to 500
+Statistic: 0.013649892899034415; P-Value: 0.9999999978664816
+
+[CLUSTER 3]
+
+Cluster 3 from 25 to 100
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 50 to 150
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 75 to 200
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 100 to 250
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 150 to 300
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 200 to 350
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 250 to 400
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 300 to 450
+Statistic: 1580.011575483094; P-Value: 0.0
+
+Cluster 3 from 350 to 500
+Statistic: 1580.011575483094; P-Value: 0.0
+
+[CLUSTER 4]
+
+Cluster 4 from 25 to 100
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 50 to 150
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 75 to 200
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 100 to 250
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 150 to 300
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 200 to 350
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 250 to 400
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 300 to 450
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+Cluster 4 from 350 to 500
+Statistic: 156.02826069991107; P-Value: 1.157e-320
+
+[CLUSTER 5]
+
+Cluster 5 from 25 to 100
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 50 to 150
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 75 to 200
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 100 to 250
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 150 to 300
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 200 to 350
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 250 to 400
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 300 to 450
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
+Cluster 5 from 350 to 500
+Statistic: 15.25399589669613; P-Value: 5.44733695382379e-30
+
