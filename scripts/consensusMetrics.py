@@ -58,9 +58,20 @@ for result in consensusResults:
         cluster_subgraph = G.subgraph(cluster_nodes)
         # print(cluster_subgraph.number_of_nodes(), cluster_subgraph.number_of_edges())
 
-        # calculate graph theory metrics
-        cluster_betweenness = nx.betweenness_centrality(cluster_subgraph, weight="weight") # maybe set endpoints=True
-        graphMetric[iteration].append(cluster_betweenness)
+        ### calculate graph theory metrics ###
+        if metricName == "degreeCentrality":
+            cluster_degreeCentrality = nx.degree_centrality(cluster_subgraph)
+            graphMetric[iteration].append(cluster_degreeCentrality)
+        elif metricName == "betweenCentrality":
+            cluster_betweenness = nx.betweenness_centrality(cluster_subgraph, weight='weight') # maybe set endpoints=True
+            graphMetric[iteration].append(cluster_betweenness)
+        elif metricName == "eigenCentrality":
+            cluster_eigenvector = nx.eigenvector_centrality_numpy(cluster_subgraph, weight='weight') # numpy version is faster for larger graphs
+            graphMetric[iteration].append(cluster_eigenvector)
+        # elif metricName == "smallWorldSigma":
+        #     smallWorld = nx.algorithms.smallworld.sigma(cluster_subgraph.to_undirected())
+        #     graphMetric[iteration].append(smallWorld)
+
     print(f"Iteration {iteration} runtime: {(time.time()-iterStartTime):.2f}s")
 print(f"Total runtime: {(time.time()-startTime):.2f}s")
 
