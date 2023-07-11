@@ -1,0 +1,11 @@
+Running Consensus Clustering on Louvain: 400 iterations
+
+
+Final Consensus Clustering Results:
+[1 2 3 4 5] [1707 1282  473 1078 1056]
+
+12 Descending Neuron cluster assignments:
+4, 4, 1, 4, 4, 2, 1, 2, 2, 1, 1, 4, 
+
+Time taken for consensus clustering: 920.32 seconds
+Total time taken: 1001.37 seconds

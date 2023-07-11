@@ -108,7 +108,7 @@ for _ in range(args.expIters):
     clusterAssignments.append(labels)
 
     labels_unique, counts = np.unique(labels, return_counts=True)
-    if args.expIters > 10 and args.expIters % 10 == 0:
+    if args.expIters > 50 and args.expIters % 10 == 0:
         continue
     print(labels_unique, counts)
 
