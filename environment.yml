@@ -17,6 +17,7 @@ dependencies:
   - python-igraph=0.10.5
   - graph-tool=2.57
   - graph-tool-base=2.57
+  - seaborn=0.12.2
   - pip:
       - bctpy==0.6.0
       - netneurotools==0.2.3
