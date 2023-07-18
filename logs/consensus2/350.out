@@ -9,3 +9,27 @@ Final Consensus Clustering Results:
 
 Time taken for consensus clustering: 803.70 seconds
 Total time taken: 876.76 seconds
+
+
+swap clusters 4 & 5
+Final Consensus Clustering Results:
+[1 2 3 4 5] [1705 1286  444 1083 1078]
+
+12 Descending Neuron cluster assignments:
+5, 5, 1, 5, 5, 2, 1, 2, 2, 1, 1, 5, 
+
+swap clusters 3 & 4
+Final Consensus Clustering Results:
+[1 2 3 4 5] [1705 1286  1083 444 1078]
+
+12 Descending Neuron cluster assignments:
+5, 5, 1, 5, 5, 2, 1, 2, 2, 1, 1, 5, 
+
+
+
+300.out
+Final Consensus Clustering Results:
+[1 2 3 4 5] [1708 1287 1260  265 1076]
+
+12 Descending Neuron cluster assignments:
+5, 5, 1, 5, 5, 2, 1, 2, 2, 1, 1, 5, 
