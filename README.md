@@ -9,10 +9,11 @@
 6. Install Python and Jupyter extensions in VSCode
 
 ### Updated Dependencies
-The `environment.yml` file may not contain some of the newest dependencies. Here are the commands used to download them (currently, they are optional):
+The `environment.yml` file may not contain some of the newest dependencies. Here are the commands used to download them (currently, they are all optional except for seaborn):
 1. igraph: `conda install -c conda-forge python-igraph`
 2. graph-tool: `conda install -c conda-forge graph-tool`
 3. NNGT: `pip install --user nngt`
     - Note: Please follow pre-installation instructions at https://nngt.readthedocs.io/en/stable/user/install.html#simple-install
+4. seaborn: `conda install seaborn`
 
 To run any notebook, activate the neuprint kernel in the top right corner.
