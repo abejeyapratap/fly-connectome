@@ -1,5 +1,9 @@
 # Drosophila Hemibrain Connectome
 
+This research project is based on the dataset provided by Google Research and the FlyEM team at Janelia Research Campus. The dataset is a connectome of the Drosophila brain, which is a map of all the neurons and their connections, available at https://www.janelia.org/project-team/flyem/hemibrain.
+
+For more information about the dataset: https://ai.googleblog.com/2020/01/releasing-drosophila-hemibrain.html
+
 ## Setup
 1. Install mini-conda from https://docs.conda.io/en/latest/miniconda.html
 2. Clone this repo and run the following commands:
